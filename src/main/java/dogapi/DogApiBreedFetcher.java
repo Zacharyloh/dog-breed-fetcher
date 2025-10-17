@@ -34,7 +34,7 @@ public class DogApiBreedFetcher implements BreedFetcher {
             throw new BreedNotFoundException(breed);
         }
 
-        String url = "https://dog.ceo/api/breed/" + breed.toLowerCase(Locale.ROOT) + "/list";
+        String url = "https://dog.ceo/api/breed/" + breed.toLowerCase() + "/list";
         Request request = new Request.Builder().get().url(url).build();
 
         try  {
